@@ -1,17 +1,16 @@
-var map;
+let map;
 const marker_icon = './assets/img/marker.png';
 const marker_hover_icon = './assets/img/marker_hover.png';
 let coords = [];
 let marker;
 let routes;
-let paths = [];
 let markers = [];
 
 const Swal = require('sweetalert2')
 
 // Sets the map on all markers in the array.
 function setMapOnAll(map) {
-    for (var i = 0; i < markers.length; i++) {
+    for (let i = 0; i < markers.length; i++) {
         markers[i].setMap(map);
     }
 }
@@ -109,5 +108,4 @@ function initMap() {
         zoom: 2,
         styles: mapStyle
     });
-
 }
