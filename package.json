@@ -2,36 +2,33 @@
   "name": "TraceMap",
   "version": "1.0.0",
   "description": "Traceroute on the map",
-  "main": "main.js",
-  "build": {
-    "appId": "com.tracemap.app"
-  },
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "start": "electron .",
-    "dist": "electron-builder"
-  },
   "author": "Oleg Chulkov",
   "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "vue-cli-service electron:build",
+    "serve": "vue-cli-service electron:serve",
+    "lint": "vue-cli-service lint",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps"
+  },
+  "main": "background.js",
   "dependencies": {
     "core-js": "^3.6.5",
-    "systemjs": "^6.4.1",
+    "vue": "^2.6.11",
     "nodejs-traceroute": "^1.2.0",
-    "sweetalert2": "^9.17.1",
-    "vue": "^2.6.11"
+    "sweetalert2": "^9.17.1"
   },
   "devDependencies": {
-    "electron": "9.1.2",
-    "electron-builder": "^22.8.1",
-    "electron-packager": "^15.0.0",
     "@vue/cli-plugin-babel": "~4.4.0",
     "@vue/cli-plugin-eslint": "~4.4.0",
     "@vue/cli-service": "~4.4.0",
     "babel-eslint": "^10.1.0",
+    "electron": "^9.0.0",
+    "electron-devtools-installer": "^3.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "vue-cli-plugin-electron-builder": "~2.0.0-rc.4",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
