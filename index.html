@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0" />
+<!--    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />-->
+    <title>Tracemap</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+
+  <body>
+    <div id="sidebar" class="sidebar">
+      <div class="logo">
+        <img src="./assets/img/logo.svg" alt="Tracemap logo">
+        <p class="author">Developed by pilot114</p>
+      </div><!-- End .logo -->
+      <div class="searchbar">
+        <input id="src-bar" placeholder='Ex. google.com ou 8.8.8.8' type='text' />
+      </div><!-- End .searchbar -->
+      <div class="domain-loader"></div>
+    </div><!-- End .sidebar -->
+
+    <div class="trace-map">
+      <div id="map"></div>
+    </div><!-- End .trace-map -->
+
+    <!-- Scripts -->
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script>
+      console.log(process.versions);
+      console.log(process.platform, process.arch);
+    </script>
+    <script src="./map-style.js"></script>
+    <script src="./map-style.js"></script>
+    <script src="./maps.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRBrERHcgbxaFUhnI8LWWa70b084Bnaq8&callback=initMap" ></script>
+    <script src="./renderer.js"></script>
+  </body>
+</html>

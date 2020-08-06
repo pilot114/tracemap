@@ -1,0 +1,30 @@
+{
+  "name": "TraceMap",
+  "version": "1.0.0",
+  "description": "Traceroute on the map",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.tracemap.app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/romulomourao/tracemap"
+  },
+  "author": "Oleg Chulkov",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "9.1.2",
+    "electron-builder": "^22.8.1",
+    "electron-packager": "^15.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "nodejs-traceroute": "^1.2.0",
+    "sweetalert2": "^9.17.1",
+    "systemjs": "^6.4.1"
+  }
+}

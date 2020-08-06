@@ -1,0 +1,181 @@
+/*////////////////////////////////////////////////////////////////////////////*/
+/* General */
+/*////////////////////////////////////////////////////////////////////////////*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,700');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-input-placeholder { 
+    /* Chrome/Opera/Safari */
+    color: #636363;
+    font-weight: 100;
+    font-style: italic;
+    font-size: .9rem;
+}
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/* .sidebar */
+/*////////////////////////////////////////////////////////////////////////////*/
+.sidebar {
+    width: 350px;
+    height: 100vh;
+    float: left;
+    background-color: #333;
+    color: #fdf6f6;
+    border-right: 5px solid #2a2a2a;
+}
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/* .logo */
+/*////////////////////////////////////////////////////////////////////////////*/
+.logo {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.logo img {width: 80%;}
+
+.logo .author {
+    color: #636363;
+    font-style: italic;
+    font-size: 0.6em;
+    width: 200px;
+    margin: 0 auto;
+}
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/* .searchbar */
+/*////////////////////////////////////////////////////////////////////////////*/
+.searchbar {margin: 20px 0 30px 0;}
+
+.searchbar input {
+    display: block;
+    width: 80%;
+    border: none;
+    border-bottom: 2px solid #636363;
+    font-size: 1rem;
+    font-weight: 500;
+    outline: none;
+    color: #00bc64;
+    background-color: transparent;
+    padding: 6px 12px 6px 12px;
+    margin: 10px auto 0 auto;
+}
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/* .domain-loader */
+/*////////////////////////////////////////////////////////////////////////////*/
+.domain-loader {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.domain-loader .domain {
+    display: block;
+    padding: 10px 0;
+    font-size: 1.3rem;
+    color: #ffffff;
+    background-color: #00bc66;
+    cursor: default;
+}
+
+.domain-loader .domain::selection {background-color: transparent;}
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/* .loader */
+/*////////////////////////////////////////////////////////////////////////////*/
+.loader {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border: 8px solid #484848;
+    border-radius: 50%;
+    border-top: 8px solid #00bc64;
+    margin: 0;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/* .trace-list */
+/*////////////////////////////////////////////////////////////////////////////*/
+.trace-list {
+    height: calc(100vh - 270px);
+    list-style: none;
+    overflow-y: scroll;
+}
+
+.trace-list::-webkit-scrollbar {
+    width: 3px;
+    background-color: #333;
+}
+
+.trace-list::-webkit-scrollbar-track {background-color: #333;}
+.trace-list::-webkit-scrollbar-thumb {background-color: #00bc64;}
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/* .box */
+/*////////////////////////////////////////////////////////////////////////////*/
+.box {
+    position: relative;
+    width: 90%;
+    padding: 15px;
+    margin: 0 auto;
+    margin-bottom: 8px;
+    background-color: #2a2a2a;
+    cursor: pointer;
+}
+
+.box:hover {background-color: #444;}
+
+.box-hover {background-color: #444;}
+
+.box .ip {
+    padding-right: 65px;
+    color: #00bc66;
+}
+
+.box .delay,
+.box .whois,
+.box .locate {font-size: 0.7rem;}
+
+.box .delay {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #636363;
+    text-align: right;
+}
+
+.box .whois {
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.box .locate {
+    color: #656565;
+    margin-top: 2px;
+}
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/* .trace-map */
+/*////////////////////////////////////////////////////////////////////////////*/
+.trace-map {
+    width: calc(100% - 350px);
+    height: 100vh;
+    float: left;
+    background-color: #333;
+}
+
+#map {height: 100vh;}
+#map > div {background-color: #2B2B2B !important; /*Used to overwrite Google Maps background-color in map canvas */}
